@@ -1,13 +1,41 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* color variables */
+  /* beige */
+  --beige-light: #f8f4f0;
+  --beige-dark: #98908b;
+  /* grey */
+  --grey-lightest: #f2f2f2;
+  --grey-light: #b3b3b3;
+  --grey-dark: #696868;
+  --grey-darkest: #201f22;
+  --navy-grey: #97a0ac;
+  /* secondary */
+  --green: #277c78;
+  --yellow: #f2cdac;
+  --cyan: #82c9d7;
+  --navy: #626070;
+  --red: #c94739;
+  --purple: #826cb0;
+  /* others */
+  --white: #ffffff;
+  --purple-light: #af81ba;
+  --turqoise: #597c7c;
+  --brown: #93674f;
+  --magenta: #934f6f;
+  --blue: #3f82b2;
+  --army-green: #7f9161;
+  --gold: #cab361;
+  --orange: #be6c49;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* spacing variables */
+  --spacing-40: 40px;
+  --spacing-32: 32px;
+  --spacing-24: 24px;
+  --spacing-20: 20px;
+  --spacing-16: 16px;
+  --spacing-12: 12px;
+  --spacing-8: 8px;
+  --spacing-4: 4px;
 }
 
 html,
