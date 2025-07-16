@@ -1,27 +1,20 @@
-import React, { FormEvent } from "react";
+import React from "react";
 
 export interface buttonInterface {
   title?: string | number | React.ReactNode;
-  isNavbarDropdownTab?: boolean;
-  onClick?: (e: FormEvent) => void;
-  isLoading?: boolean;
-  isDisabled?: boolean;
+  onClick?: (e: React.SyntheticEvent) => void;
   buttonType?: "reset" | "submit" | "button";
   size?: "small" | "large";
-  isSecondary?: boolean;
-  isTertiary?: boolean;
-  isNavigation?: boolean;
   iconSize?: number;
-  iconLeft?: string;
-  iconRight?: string;
+  iconName?: string;
   iconViewbox?: string;
   className?: string;
   isMobileFilter?: boolean;
   href?: string;
   width?: number | string;
   variant: number;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
+  // onMouseEnter?: () => void;
+  // onMouseLeave?: () => void;
 }
 
 export interface WrappButton {
@@ -31,16 +24,7 @@ export interface WrappButton {
   size?: "small" | "large";
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
-  isNavbarDropdownTab?: boolean;
-  isNavigationTab?: boolean;
-  isMobileFilter?: boolean;
-  isloginbutton?: boolean;
-  isLoading?: boolean;
-  issecondary?: boolean;
-  isdisabled?: boolean;
-  isnavigation?: boolean;
-  isicon?: boolean;
-  ismobilefilter?: boolean;
+  variant?: number;
   width?: number | string;
 }
 

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { buttonInterface } from "@/app/global/interface";
-import { Buttons, ButtonWrapper, SvgWrapper, TextDesc } from "./style";
+import { Buttons, ButtonWrapper, SvgWrapper } from "./style";
 import { BUTTON_TYPE } from "@/app/global/constant";
 import SVGIcon from "@/app/assets/svgIcon";
 
@@ -30,61 +30,31 @@ import SVGIcon from "@/app/assets/svgIcon";
 export const Button = ({
   title,
   onClick,
-  isLoading = false,
   className,
   buttonType,
-  href,
-  variant = BUTTON_TYPE.SECONDARY,
+  variant,
   iconViewbox,
-  isNavbarDropdownTab,
-  iconLeft,
-  iconRight,
+  iconName,
   iconSize,
   size = "large",
   width,
-  isMobileFilter,
-  isDisabled,
-  onMouseEnter,
-  onMouseLeave,
 }: buttonInterface) => {
   return (
     <>
-      <ButtonWrapper isLoading={isLoading} width={width}>
+      <ButtonWrapper width={width}>
         <Buttons
           onClick={onClick}
-          isSecondary={variant === BUTTON_TYPE.SECONDARY}
-          disabled={isDisabled || isLoading}
           type={buttonType}
           size={size}
-          isTertiary={variant === BUTTON_TYPE.TERTIARY}
-          isNavigationTab={variant === BUTTON_TYPE.NAVIGATION}
-          isicon={variant === BUTTON_TYPE.ICON}
-          isLink={variant === BUTTON_TYPE.LINK}
-          isNavbarDropdownTab={isNavbarDropdownTab}
-          as={href ? "a" : "button"}
-          href={href}
+          variant={variant}
           aria-label={typeof title === "string" ? title : undefined}
           className={className}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
         >
-          {iconLeft && (
+          {title}
+          {iconName && variant === BUTTON_TYPE.TERTIARY && (
             <SvgWrapper>
               <SVGIcon
-                name={iconLeft}
-                height={iconSize}
-                width={iconSize}
-                viewBox={iconViewbox}
-              />
-            </SvgWrapper>
-          )}
-          <TextDesc isMobileFilter={isMobileFilter}>
-            <span>{title}</span>
-          </TextDesc>
-          {iconRight && (
-            <SvgWrapper>
-              <SVGIcon
-                name={iconRight}
+                name={iconName}
                 height={iconSize}
                 width={iconSize}
                 viewBox={iconViewbox}
