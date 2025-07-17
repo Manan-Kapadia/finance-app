@@ -64,11 +64,7 @@ export const Buttons = styled.button<WrappButton>`
       background-color: var(--red);
       color: var(--white);
       &:hover {
-        background-color: linear-gradient(
-            rgba(255, 255, 255, 0.2),
-            rgba(255, 255, 255, 0.2)
-          ),
-          #d1493f;
+        opacity: 75%;
       }
     `}
 `;
