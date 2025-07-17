@@ -28,14 +28,18 @@
   --orange: #be6c49;
 
   /* spacing variables */
-  --spacing-40: 40px;
-  --spacing-32: 32px;
-  --spacing-24: 24px;
-  --spacing-20: 20px;
-  --spacing-16: 16px;
-  --spacing-12: 12px;
-  --spacing-8: 8px;
-  --spacing-4: 4px;
+  --space-40: 40px;
+  --space-32: 32px;
+  --space-24: 24px;
+  --space-20: 20px;
+  --space-16: 16px;
+  --space-12: 12px;
+  --space-8: 8px;
+  --space-4: 4px;
+  --space-0: 0px;
+
+  /* box shadow */
+  --border: inset 0 0 0 1px var(--grey-dark);
 }
 
 html,
