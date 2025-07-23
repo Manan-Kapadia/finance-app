@@ -1,5 +1,5 @@
-'use client';
-import { useEffect, useRef } from 'react';
+"use client";
+import { useEffect, useRef } from "react";
 
 //Close dropdown when clicking outside
 export const useOutsideClick = (callback?: () => void) => {
@@ -16,12 +16,9 @@ export const useOutsideClick = (callback?: () => void) => {
         if (callback) callback();
       }
     };
-
-    // eslint-disable-next-line no-undef
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      // eslint-disable-next-line no-undef
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [callback]);
 
