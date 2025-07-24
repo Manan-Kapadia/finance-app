@@ -17,13 +17,13 @@ export const InputWrapper = styled.div<Props>`
       hasError
         ? "var(--red)"
         : isActive
-        ? "var(--grey-darkest)"
-        : "var(--grey-light)"};
+        ? "var(--grey-900)"
+        : "var(--grey-300)"};
 `;
 
 export const StyledLabel = styled.label`
   font-size: 14px;
-  color: var(--grey-darkest);
+  color: var(--grey-900);
   font-weight: 500;
 `;
 
@@ -33,11 +33,11 @@ export const StyledInput = styled.input<{ hasError?: boolean }>`
 
   background: var(--white);
   font-size: 16px;
-  color: var(--grey-darkest);
+  color: var(--grey-900);
   outline: none;
   transition: border 0.2s;
   &:focus {
-    border-color: var(--grey-dark);
+    border-color: var(--grey-500);
   }
 `;
 
