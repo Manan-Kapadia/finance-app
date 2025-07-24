@@ -24,17 +24,17 @@ export const Buttons = styled.button<WrappButton>`
   ${({ variant }) =>
     variant === BUTTON_TYPE.PRIMARY &&
     css`
-      background-color: var(--grey-darkest);
+      background-color: var(--grey-900);
       color: var(--white);
       &:hover {
-        background-color: var(--grey-dark);
+        background-color: var(--grey-500);
       }
     `}
   ${({ variant }) =>
     variant === BUTTON_TYPE.SECONDARY &&
     css`
-      background-color: var(--beige-light);
-      color: var(--grey-darkest);
+      background-color: var(--beige-100);
+      color: var(--grey-900);
       &:hover {
         background-color: var(--white);
         box-shadow: var(--border);
@@ -45,16 +45,16 @@ export const Buttons = styled.button<WrappButton>`
     css`
       background-color: unset;
       padding: var(--space-0);
-      color: var(--grey-dark);
+      color: var(--grey-500);
       gap: var(--space-12);
       svg path {
-        fill: var(--grey-dark);
+        fill: var(--grey-500);
       }
       &:hover {
-        color: var(--grey-darkest);
+        color: var(--grey-900);
         background-color: unset;
         svg path {
-          fill: var(--grey-darkest);
+          fill: var(--grey-900);
         }
       }
     `}
