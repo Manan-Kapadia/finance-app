@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { WrappButton } from "../../global/interface";
-import { typography } from "@/styles/typography";
+import { Typography } from "@/styles/typography";
 import { BUTTON_TYPE } from "@/app/global/constant";
 
 export const Buttons = styled.button<WrappButton>`
@@ -13,7 +13,7 @@ export const Buttons = styled.button<WrappButton>`
   white-space: nowrap;
   align-items: center;
   cursor: pointer;
-  ${typography.preset4Bold}
+  ${Typography.preset4Bold}
   overflow: hidden;
   border: none;
   transition: all 0.3s ease-in-out;

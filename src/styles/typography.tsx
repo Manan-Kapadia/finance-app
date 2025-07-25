@@ -1,6 +1,6 @@
 // src/styles/typography.tsx
 
-export const typography = {
+export const Typography = {
   preset1: {
     fontSize: "32px",
     fontWeight: 700, // Bold
