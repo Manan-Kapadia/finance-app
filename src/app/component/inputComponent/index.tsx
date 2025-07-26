@@ -1,25 +1,63 @@
 "use client";
 import React from "react";
-import { ErrorText, InputWrapper, StyledInput, StyledLabel } from "./style";
+import {
+  InputWrapper,
+  Input,
+  LeftSection,
+  StyledLabel,
+  FieldWrapper,
+} from "./style";
+import { useState } from "react";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  error?: string;
+type InputProps = {
   width?: string;
-}
+  prefix?: React.ReactNode;
+  suffix?: React.ReactNode;
+  label?: string;
+  inputType?: "text" | "email" | "password";
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 const InputComponent: React.FC<InputProps> = ({
-  label,
-  error,
   width,
+  prefix,
+  suffix,
+  label,
+  inputType = "text",
   ...props
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
+  const [isFilled, setIsFilled] = useState(!!props.value);
+
+  const handleFocus = () => setIsFocused(true);
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    setIsFocused(false);
+    setIsFilled(!!e.target.value);
+    if (props.onBlur) props.onBlur(e);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsFilled(!!e.target.value);
+    if (props.onChange) props.onChange(e);
+  };
+
   return (
-    <InputWrapper width={width}>
+    <FieldWrapper>
       {label && <StyledLabel htmlFor={props.id}>{label}</StyledLabel>}
-      <StyledInput {...props} placeholder="Enter Text" />
-      {error && <ErrorText>{error}</ErrorText>}
-    </InputWrapper>
+      <InputWrapper width={width} isActive={isFocused} filled={isFilled}>
+        <LeftSection>
+          {prefix}
+          <Input
+            {...props}
+            id={props.id}
+            type={inputType}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onChange={handleChange}
+          />
+        </LeftSection>
+        {suffix}
+      </InputWrapper>
+    </FieldWrapper>
   );
 };
 
