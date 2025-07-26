@@ -14,7 +14,7 @@ type InputProps = {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   label?: string;
-  inputType?: "text" | "email" | "password" | "number";
+  inputType?: "text" | "email" | "password";
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 const InputComponent: React.FC<InputProps> = ({
