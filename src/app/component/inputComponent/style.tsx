@@ -19,11 +19,21 @@ export const InputWrapper = styled.div<Props>`
   opacity: 1;
 `;
 
+export const LeftSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+`;
+
 export const StyledLabel = styled.label`
-  font-size: 14px;
-  color: var(--grey-900);
-  font-weight: 500;
-  margin-bottom: 4px;
+  ${Typography.preset5Bold}
+  color: var(--grey-500);
+`;
+
+export const FieldWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 `;
 
 export const Input = styled.input<Props>`
@@ -46,24 +56,4 @@ export const Input = styled.input<Props>`
     `
       background: var(--grey-50);
     `}
-`;
-
-// Icon styles
-export const InputIconLeft = styled.span`
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-`;
-
-export const InputIconRight = styled.span`
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  cursor: pointer;
 `;
