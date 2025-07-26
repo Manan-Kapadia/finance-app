@@ -5,7 +5,6 @@ interface Props {
   width?: string | number;
   isActive?: boolean;
   filled?: boolean;
-  x;
 }
 
 export const InputWrapper = styled.div<Props>`
