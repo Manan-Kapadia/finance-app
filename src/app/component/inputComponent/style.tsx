@@ -9,7 +9,7 @@ interface Props {
 
 export const InputWrapper = styled.div<Props>`
   display: flex;
-  flex-direction: column;
+  align-items: center;
   width: ${({ width }) => width || "100%"};
   gap: var(--space-16);
   padding: var(--space-12) var(--space-20);
@@ -20,6 +20,7 @@ export const InputWrapper = styled.div<Props>`
 `;
 
 export const LeftSection = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   gap: var(--space-12);
